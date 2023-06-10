@@ -6,6 +6,7 @@ body {
     background-repeat: no-repeat;
     position: relative;
     height: 100vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -80,7 +81,7 @@ nav {
 .bottom-left-paragraph {
     font-family: 'Montserrat';
     font-weight:lighter;
-    font-size: 26px;
+    font-size: 30px;
     line-height: 37px;
     text-align: center;
     color: #FFFFFF;
@@ -98,8 +99,8 @@ nav {
     border-radius: 60px;
     background: transparent;
     color: #7BFFE9;
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 38px;
+    font-weight: 100;
     text-align: center;
     line-height: 115px;
 }
