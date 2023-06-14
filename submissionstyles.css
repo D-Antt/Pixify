@@ -4,6 +4,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    font-family: Montserrat;
 }
 
 header {
@@ -40,23 +41,47 @@ main {
 }
 
 #leftSideMain {
-    width: 66.66%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: solid red 2px;
 }
 
-.centered-title {
+#submissionsHeader {
     text-align: center;
-    width: 407px;
     height: 46px;
+    border: solid green 2px;
 }
 
 #submissionsContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
+    gap: 10px;
+    justify-items: center;
+    border: solid blue 2px;
+    margin: 0;
 }
+
+figcaption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.see-more {
+    color: black;
+    text-decoration: none;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-label, .see-more {
+    display: block;
+}
+
 
 #natureAdventures {
     width: 345px;
@@ -102,11 +127,43 @@ main {
 
 
 #submissionForm {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     width: 481px;
     height: 608px;
     background: #2A3B49;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 40px 40px;
+}
+
+#submissionForm h1 {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#submissionForm input[type="text"] {
+    width: 360px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    color: #D9D9D9;
+}
+
+#submissionForm input[type="text"]::placeholder {
+    color: #D9D9D9;
+}
+
+#submissionForm input[type="submit"] {
+    width: 360px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    color: #D9D9D9;
 }
