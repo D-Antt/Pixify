@@ -47,6 +47,8 @@ main {
 
 .centered-title {
     text-align: center;
+    width: 407px;
+    height: 46px;
 }
 
 #submissionsContainer {
@@ -76,6 +78,20 @@ main {
     border-radius: 8px;
 }
 
+#innocentBoyJumping {
+    width: 345px;
+    height: 213px;
+    background: url(alvin-mahmudov-vKuEhorbvYI-unsplash.jpg);
+    border-radius: 8px;
+}
+
+#manLoungingAtAirport {
+    width: 345px;
+    height: 213px;
+    background: url(jeshoots-com-mSESwdMZr-A-unsplash.jpg);
+    border-radius: 8px;
+}
+
 #rightSideMain {
     width: 33.33%;
     display: flex;
@@ -83,8 +99,13 @@ main {
     align-items: center;
 }
 
+
 #submissionForm {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 481px;
+    height: 608px;
+    background: #2A3B49;
+    border-radius: 8px;
 }
