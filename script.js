@@ -49,7 +49,3 @@ const imageSets = [
     }
 
   ];
-
-  document.getElementById('dark-mode-text').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-  });
