@@ -15,7 +15,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 27px;
 }
 
 .logo {
@@ -54,10 +53,48 @@ header {
 }
 
 #setTitle {
-    text-align: center;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 44px;
+text-align: center;
 }
 
 #imageContainer {
     display:flex;
     justify-content: center;
+}
+
+#imageDisplay {
+    max-width: 80%;
+}
+
+#buttonContainer {
+    display:flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 0;
+}
+
+#prevButton {
+    width: 103px;
+    height: 35px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #7BFFE9;
+    background: #2A3B49;
+    border-radius: 60px;
+}
+
+#nextButton {
+    width: 103px;
+    height: 35px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #7BFFE9;
+    background: #2A3B49;
+    border-radius: 60px;
 }

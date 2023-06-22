@@ -1,3 +1,4 @@
+console.log("script connected!!")
 const imageSets = [
     {
       id:1,  
@@ -50,38 +51,57 @@ const imageSets = [
 
   ];
 
-let currentSetIndex = 0;
-let currentImageIndex = 0;
+  // Find all "See more" links
+const seeMoreLinks = document.querySelectorAll('.see-more');
 
-function updateImage() {
-    const setName = document.getElementById('setName');
-    const setTitle = document.getElementById('setTitle');
-    const imageDisplay = document.getElementById('imageDisplay');
+// Add a click event listener to each link
+seeMoreLinks.forEach(link => {
+  link.addEventListener('click', function(event) {
+    // Prevent the default action
+    event.preventDefault();
 
-    setName.textContent = imageSets[currentSetIndex].name;
-    setTitle.textContent = imageSets[currentSetIndex].title;
-    imageDisplay.src = imageSets[currentSetIndex].images[currentImageIndex];
+    // Get the id of the image set from the data-set-id attribute
+    const setId = this.dataset.setId;
+
+    // Find the image set with the matching id
+    const imageSet = imageSets.find(set => set.id === parseInt(setId));
+
+    // Store the image set in localStorage
+    localStorage.setItem('currentImageSet', JSON.stringify(imageSet));
+
+    // Navigate to the details page
+    window.location.href = this.href;
+  });
+});
+
+// Get the image set from localStorage
+const imageSet = JSON.parse(localStorage.getItem('currentImageSet'));
+
+if (imageSet) {
+  // Display the name and title of the image set
+  document.getElementById('setName').textContent = imageSet.name;
+  document.getElementById('setTitle').textContent = imageSet.title;
+
+  // Display the first image
+  const imageDisplay = document.getElementById('imageDisplay');
+  imageDisplay.src = imageSet.images[0];
+  imageDisplay.alt = imageSet.title;
+
+  // Add event listeners to the Previous and Next buttons
+  let currentIndex = 0;
+  document.getElementById('prevButton').addEventListener('click', function() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      imageDisplay.src = imageSet.images[currentIndex];
+    }
+  });
+  document.getElementById('nextButton').addEventListener('click', function() {
+    if (currentIndex < imageSet.images.length - 1) {
+      currentIndex++;
+      imageDisplay.src = imageSet.images[currentIndex];
+    }
+  });
 }
 
-document.getElementById('prevButton').addEventListener('click', () => {
-    currentImageIndex--;
-    if (currentImageIndex < 0) {
-        currentImageIndex = imageSets[currentSetIndex].images.length - 1;
-    }
-    updateImage();
-});
 
-document.getElementById('nextButton').addEventListener('click', () => {
-    currentImageIndex++;
-    if (currentImageIndex >= imageSets[currentSetIndex].images.length) {
-        currentImageIndex = 0;
-    }
-    updateImage();
-});
-
-// Add links to the image sets in the navigation
-
-
-// Initialize the image display
-updateImage();
 
