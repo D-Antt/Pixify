@@ -49,3 +49,39 @@ const imageSets = [
     }
 
   ];
+
+let currentSetIndex = 0;
+let currentImageIndex = 0;
+
+function updateImage() {
+    const setName = document.getElementById('setName');
+    const setTitle = document.getElementById('setTitle');
+    const imageDisplay = document.getElementById('imageDisplay');
+
+    setName.textContent = imageSets[currentSetIndex].name;
+    setTitle.textContent = imageSets[currentSetIndex].title;
+    imageDisplay.src = imageSets[currentSetIndex].images[currentImageIndex];
+}
+
+document.getElementById('prevButton').addEventListener('click', () => {
+    currentImageIndex--;
+    if (currentImageIndex < 0) {
+        currentImageIndex = imageSets[currentSetIndex].images.length - 1;
+    }
+    updateImage();
+});
+
+document.getElementById('nextButton').addEventListener('click', () => {
+    currentImageIndex++;
+    if (currentImageIndex >= imageSets[currentSetIndex].images.length) {
+        currentImageIndex = 0;
+    }
+    updateImage();
+});
+
+// Add links to the image sets in the navigation
+
+
+// Initialize the image display
+updateImage();
+

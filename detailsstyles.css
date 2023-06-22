@@ -1,0 +1,58 @@
+body {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat;
+}
+
+
+header {
+    background-color: #2A3B49;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 27px;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: 0em;
+    color: #7BFFE9;
+}
+
+#navContainer {
+    display:flex;
+    justify-content: space-around;
+    width: 400px;
+    margin-right: 50px;
+    
+}
+
+.nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#darkMode {
+    color: #7BFFE9;
+}
+
+#setName {
+    text-align: center;
+}
+
+#setTitle {
+    text-align: center;
+}
+
+#imageContainer {
+    display:flex;
+    justify-content: center;
+}
