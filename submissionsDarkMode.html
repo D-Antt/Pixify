@@ -2,9 +2,13 @@
 <html>
 <head>
     <style>body {
-        background-color: #2A3B49;
-        color: white;
-    }</style>
+                background-color: #2A3B49;
+                color: white;
+                }
+            .see-more {
+                color:white;
+            }
+    </style>
     <link rel="stylesheet" type="text/css" href="submissionstyles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,11 +16,11 @@
 </head>
 <body>
     <header>
-        <div class="logo">PIXIFY</div>
+        <div class="logo"><a href="index.html" id="logoID">PIXIFY</a></div>
         <nav id="navContainer">
             <a href="#" class="nav-link">2023 Submissions</a>
-            <a href="#" class="nav-link">About</a>
-            <a href="submissions.html" id="lightMode" class="nav-link">Light Mode</a>
+            <a href="aboutus.html" class="nav-link">About</a>
+            <a href="submissions.html" id="darkMode" class="nav-link">Light Mode</a>
         </nav>
     </header>
     <main>
@@ -27,42 +31,43 @@
                         <img src="david-marcu-78A265wPiO4-unsplash 1.png" id="natureAdventures" alt="Nature Adventures - Jane Doe">
                         <figcaption>
                             <span class="image-label">Nature Adventures - Jane Doe</span>
-                            <a href="#" class="see-more">See more</a>
+                            <a href="details.html" class="see-more" data-set-id="2">See more</a>
+
                         </figcaption>
                     </figure>
                     <figure class="image-container">
                         <img src="edward-cisneros-_H6wpor9mjs-unsplash 1.png" id="womanSmiling" alt="Woman Smiling">
                         <figcaption>
                             <span class="image-label">Faces of the World - Jane Doe</span>
-                            <a href="#" class="see-more">See more</a>
+                            <a href="details.html" class="see-more" data-set-id="3">See more</a>
                         </figcaption>
                     </figure>
                     <figure class="image-container">
                         <img src="sid-balachandran-_9a-3NO5KJE-unsplash 1.png" id="pandaEatingBamboo" alt="Panda eating bamboo">
                         <figcaption>
                             <span class="image-label">Wild Animals - Jane Doe</span>
-                            <a href="#" class="see-more">See more</a>
+                            <a href="details.html" class="see-more" data-set-id="4">See more</a>
                         </figcaption>
                     </figure>
                     <figure class="image-container">
                         <img src="alvin-mahmudov-vKuEhorbvYI-unsplash 1.png" id="innocentBoyJumping" alt="Innocent Boy Jumping">
                         <figcaption>
                             <span class="image-label">Innocence - Andrew Smith</span>
-                            <a href="#" class="see-more">See more</a>
+                            <a href="details.html" class="see-more" data-set-id="1">See more</a>
                         </figcaption>
                     </figure>
                     <figure class="image-container">
                         <img src="jeshoots-com-mSESwdMZr-A-unsplash 1.png" id="manLoungingAtAirport" alt="Man Lounging at Airport">
                         <figcaption>
                             <span class="image-label">Travel Diaries - Irna Towsen</span>
-                            <a href="#" class="see-more">See more</a>
+                            <a href="#" class="see-more" data-set-id="5">See more</a>
                         </figcaption>
                     </figure>
                     <figure class="image-container">
                         <img src="david-marcu-78A265wPiO4-unsplash 1.png" id="natureAdventures" alt="Nature Adventures">
                         <figcaption>
                             <span class="image-label">Nature Adventures</span>
-                            <a href="#" class="see-more">See more</a>
+                            <a href="details.html" class="see-more" data-set-id="2">See more</a>
                         </figcaption>
                     </figure>
                 </div>
@@ -82,6 +87,9 @@
             </form>
         </div>
     </main>
-    <script>src="script.js"</script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
+

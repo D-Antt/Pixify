@@ -25,7 +25,14 @@ header {
     line-height: 44px;
     letter-spacing: 0em;
     color: #7BFFE9;
+    text-decoration: none;
 }
+
+#logoID {
+    text-decoration: none;
+    color: #7BFFE9;
+}
+
 
 #navContainer {
     display:flex;
